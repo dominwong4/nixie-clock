@@ -10,9 +10,15 @@ export const NixieContainer = styled.div`
 export const StyledNumebrContainer = styled.div`
   display: flex;
   width: 100px;
-  height: 200px;
+  height: 14vh;
+  @media screen and (min-width: 900px) {
+    height: 22vh;
+  }
   justify-content: center;
   align-items: center;
+  background-size: 5px 5px;
+  background-image: linear-gradient(to right, #8080800b 1px, transparent 1px),
+    linear-gradient(to bottom, #8080800b 1px, transparent 1px);
 `;
 export const StyledNumber = styled.div.attrs({})`
   position: absolute;
