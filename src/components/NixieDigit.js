@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import dayjs from "dayjs";
+import React from "react";
 import { StyledNumber, StyledNumebrContainer } from "../style/Nixie";
 
 const NixieDigit = ({ digit }) => {
@@ -9,7 +8,8 @@ const NixieDigit = ({ digit }) => {
       <StyledNumebrContainer>
         {digitArray.map((digitItem) => (
           <StyledNumber
-            className={digit == digitItem ? "active" : ""}
+            key={digitItem}
+            className={digit === digitItem ? "active" : ""}
             number={digitItem}
           >
             {digitItem}
